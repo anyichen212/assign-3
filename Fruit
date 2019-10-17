@@ -1,0 +1,53 @@
+class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello world!");
+    Fruit a = new Fruit("Fruit","Taste",2);
+    Fruit b = new Apple("Fruit","Taste",2);
+    Fruit c = new Orange("Fruit","Taste",2);
+    a.eat();
+    System.out.println();
+    b.eat();
+    System.out.println();
+    c.eat();
+  }
+}
+
+class Fruit{
+ String name;
+ String taste;
+ double size;
+  public Fruit(String name, String taste, double size){
+    this.name = name;
+    this.taste = taste;
+    this.size = size;
+
+  }
+
+  public void eat(){
+    System.out.print( "The " + this.name + " taste " + this.taste + "!");
+  }
+}
+
+class Apple extends Fruit{
+  public Apple(String name, String taste, double size){
+    super(name,taste,size);
+    this.taste="sweet";
+    this.name ="apple";
+  }
+ 
+  public void eat(){
+    super.eat();
+  }
+}
+
+class Orange extends Fruit{
+  public Orange(String name, String taste, double size){
+    super(name,taste,size);
+    this.taste="sour";
+    this.name ="Orange";
+  }
+ 
+  public void eat(){
+    super.eat();
+  }
+}
